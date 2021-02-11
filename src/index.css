@@ -1,0 +1,196 @@
+
+.product_container{
+  height: 100vh;
+  display: grid;
+  grid-template: 0.1fr 0.15fr 1fr/1fr;
+}
+
+
+
+.flex-container {
+  position: relative;
+  display: flex;
+  left: 1300px;
+  width: 200px;
+  height: 80px;
+  bottom: 500px; 
+  border: 3px solid #73AD21;
+  padding-bottom: 50px;
+  padding-left: 40px;
+}
+
+.product_form{
+  position: absolute;
+  left: 100px;
+  padding-left: 40px;
+  padding: 10px 10px;
+  background: rgb(243, 227, 10);
+  box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.5);
+  top: 40%;
+  left: 5%;
+  width: 20%;
+  height: 25%;
+}
+
+.product_header {
+  position: relative;
+  color:rgb(187, 255, 0);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  left: 1300px;
+  bottom: 500px;
+}
+
+.alignleft{
+  position: absolute;
+  left: 35%;
+  top: 25%;
+}
+
+.customercontainer{
+  height: 100vh;
+  display: grid;
+  grid-template: 0.1fr 0.15fr 1fr/1fr;
+}
+
+.customer_card {
+  position: relative;
+  padding-left: 40px;
+  padding-top: 40px;
+  top: 20px;
+  right: 20%;
+  border: 3px solid #73AD21;
+  width: 30%;
+  height: 150px;
+}
+
+.customersformbody{
+  position: relative;
+  left: 100px;
+  top: 50px;
+  padding: 5px 20px;
+  position: relative;
+  width: 50%;
+  background: rgb(243, 227, 10);
+  box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.display_customer_card{
+  position: relative;
+  left: 1300px;
+  bottom: 400px
+}
+
+.customer_header{
+  position: relative;
+  bottom: 90%;
+  right: 15%;
+  color:rgb(187, 255, 0);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.show_bill td,
+.show_bill th {
+  border: 1px solid rgb(15, 14, 14);
+}
+
+.show_bill tr:nth-child(even) {
+background-color: greenyellow;
+}
+
+.show_bill {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 1000px;
+  bottom: 500px;
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 10;
+}
+
+.invoice_title {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.show_bill .invoice_header {
+  letter-spacing: 1px;
+  margin: 5px 5px;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.invoice_table .bill_table {
+  table-layout: auto;
+  width: 100%;
+}
+
+.invoice_sign {
+  position: relative;
+  bottom: 20px;
+}
+
+.invoice_total {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  margin-top: 10px;
+}
+
+.admin_sign {
+  font-family: "Dancing Script";
+}
+
+.bill_container{
+  display: grid;
+  grid-template: 0.1fr 0.2fr 1fr/1fr;
+  grid-gap: 5px;
+  padding-right: 30px;
+}
+
+.bill_header{
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.date_picker,
+.customer_name,
+.product_name,
+.gen_butn{
+  margin: 5px;
+  padding-left: 60px;
+}
+
+.date{
+  height: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.button,
+.prduct_button {
+  transform: scale(1.1);
+  width: 160px;
+  transition: 3s;
+  background: rgb(20, 248, 200);
+  padding: 15px 32px;
+  right:20%
+ 
+}
+
+
+
+
