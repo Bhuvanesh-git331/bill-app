@@ -33,7 +33,7 @@ Install the dependencies and devDependencies and start the server.
 
 $ npm install
 
-### `ontributors`
+### `Contributors`
 
 Bhuvanesh S
 
