@@ -51,3 +51,6 @@ $ npm install
 
 ![image](https://user-images.githubusercontent.com/74610770/109151646-72cd8680-7790-11eb-9a27-4cd0f4570ae0.png)
 
+**Customers Component**
+
+![image](https://user-images.githubusercontent.com/74610770/109151927-d061d300-7790-11eb-87a9-dcec69be34e9.png)
