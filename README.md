@@ -33,8 +33,12 @@ Install the dependencies and devDependencies and start the server.
 
 $ npm install
 
-### `Contributors`
+### `ScreenShots`:
 
-Bhuvanesh S
+**Registration Page**
+
+
+
+
 
 
