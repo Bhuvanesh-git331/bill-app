@@ -66,3 +66,7 @@ $ npm install
 **Admin Page**
 
 ![image](https://user-images.githubusercontent.com/74610770/109152527-a2c95980-7791-11eb-9384-c68b24d299eb.png)
+
+**Bill in PDF fprmat**
+
+![image](https://user-images.githubusercontent.com/74610770/109152729-e328d780-7791-11eb-9c42-b5cbabfa1e54.png)
