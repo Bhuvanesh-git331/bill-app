@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
-import {createDispatchHook, useDispatch, useSelector} from 'react-redux'
+import { useDispatch, useSelector} from 'react-redux'
+import {Button} from '@material-ui/core'
 import {startRemoveCustomersData} from '../../Action/customersAction'
 import EditCustomers from './editCustomers'
 
@@ -48,8 +49,8 @@ const CustomersList=(props)=> {
           Date- {createdAt && createdAt.slice(0,createdAt.indexOf("T")).split("-").join("/")}
       </div>
 
-      <button onClick={()=>handleRemove(_id) }>Delete</button>  {' '}
-      <button onClick={()=>handleEdit(_id)}>Edit</button> <br />
+      <Button variant='contained' color='primary' onClick={()=>handleRemove(_id) }>Delete</Button>  {' '}
+      <Button variant='contained' color='secondary' onClick={()=>handleEdit(_id)}>Edit</Button> <br />
 
 
     {

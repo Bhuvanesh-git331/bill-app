@@ -3,6 +3,7 @@ import { TextField } from "@material-ui/core"
 import {useSelector, useDispatch} from 'react-redux'
 import ProductSelect from './productSelect'
 import ShowAddedProduct from './showAddedProduct'
+import {Button} from '@material-ui/core'
 import swal from 'sweetalert'
 import {startCreateBill} from '../../Action/billAction'
 import BillDisplay from './billDisplay'
@@ -73,7 +74,7 @@ const BillContainer=(props)=> {
        <option value=''>select customer</option>
        {customers.length!==0 &&  customers.map((customer)=> {
            return (
-                <option key={customer._id} value={customer._id}>
+                <option key={customer._id} value={customer._id} style={{fontSize:'1rem'}}>
                     {customer.name}
                 </option>
            )
@@ -86,13 +87,15 @@ const BillContainer=(props)=> {
                 <ProductSelect />
             </div> <br />
 
-            <div>
+            
                 <ShowAddedProduct /> <br />
 
-                <button class='button' onClick={billGenerate}>
+            <div className='generate_bill'>
+            <Button variant='contained' color='primary' onClick={billGenerate}>
                 Generate Bill
-            </button>
+            </Button>
             </div>
+                
             <div className='bill_dis'>
           {billDisplay && <BillDisplay />}
             </div>

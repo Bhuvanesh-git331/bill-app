@@ -24,7 +24,7 @@ const CustomerContainer=(props)=> {
 
 <h2 style={{fontFamily:'cursive'}}>Input your Customers details here</h2>
 
-        <br /> <br /> <br />
+        
 
    <div className='form_container'>
     <CustomersForm /> 
@@ -36,9 +36,6 @@ const CustomerContainer=(props)=> {
                <h2>No customers found</h2>
            ) : (
                <div>
-                   <div className='customer_header'>
-                   <h2>Total Customers-{users.length}</h2>
-                   </div>
                 {
                     users.map((user)=> {
                         return <CustomersList key={user._id} {...user}/>

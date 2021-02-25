@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Link, Redirect} from 'react-router-dom'
 import {Form} from 'react-bootstrap'
 import {useDispatch} from 'react-redux'
+import {Button} from '@material-ui/core'
 import {startUserRegister} from '../../Action/usersAction'
 import validator from 'validator'
 import swal from 'sweetalert'
@@ -82,7 +83,6 @@ const Register=(props)=> {
 
            <div style={{textAlign:'center'}}>
            <form onSubmit={handleSubmit}>
-           <label><b>Username</b></label>   {' '} 
           <input type='text' 
           id='username'
           name='username'
@@ -91,7 +91,7 @@ const Register=(props)=> {
           placeholder='Enter username'/>  <br />
           {formErrors.username && <span style={{color:'red'}}>{formErrors.username}</span>} <br />
 
-          <label><b>Email</b></label>   {'  '} 
+         
           <input type='text' 
           id='email'
           name='email'
@@ -100,7 +100,7 @@ const Register=(props)=> {
           placeholder='Enter email'/>  <br />
            {formErrors.email && <span style={{color:'red'}}>{formErrors.email}</span>} <br />
 
-         <label><b>Password</b></label>   {'  '} 
+        
          <input type='password' 
           id='password'
           name='password'
@@ -109,7 +109,7 @@ const Register=(props)=> {
           placeholder='Enter password'/> <br />
            {formErrors.password && <span style={{color:'red'}}>{formErrors.password}</span>} <br />
 
-        <label><b>BusinessName</b></label>   {'  '} 
+        
            <input type='text' 
           id='businessName'
           name='businessName'
@@ -118,7 +118,7 @@ const Register=(props)=> {
           placeholder='Enter businessName'/> <br />
            {formErrors.password && <span style={{color:'red'}}>{formErrors.password}</span>} <br />
 
-           <label><b>Address</b></label> 
+
            <textarea
            type='text'
            id='address'
@@ -131,17 +131,13 @@ const Register=(props)=> {
 
            {formErrors.password && <span style={{color:'red'}}>{formErrors.password}</span>} <br />
 
-          <input type='submit' value='Register'/> {'  '} 
+          <Button type='submit' variant='contained' color='primary'>Register</Button> {'  '} 
 
-          <input type='button' value='Cancel' onClick={handleCancel}/>
-
-          
+          <Button type='button' variant='contained' color='secondary' onClick={handleCancel}>Cancel</Button>
 
            </form>
 
            </div>
-
-           
 
         </div>
     )

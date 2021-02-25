@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import EditProduct from './editProduct'
 import {startRemoveProduct} from '../../Action/productAction'
-import { Card } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import '../../index.css'
 
 const ProductList=(props)=> {
@@ -29,19 +29,28 @@ const ProductList=(props)=> {
 
 
     return (
-        <div class="flex-container">
-       
-        
-            <p>{name}</p>
+        <div className="product_list">
+            <b style={{color:'green'}}>{name}</b>
             
-
         <div className="price">
         <h3>Price - {price}</h3>
        
 
-       <button onClick={()=>handleDelete(_id)}>Delete</button> {' '}
+       <Button 
+       variant='contained'
+       color='primary'
+       onClick={()=>
+       handleDelete(_id)}>
+         Delete
+         </Button> {' '}
 
-       <button className='btn btn-primary' onClick={()=>handleEdit(_id)}>Edit</button>
+       <Button 
+       variant='contained'
+       color='secondary'
+       onClick={()=>handleEdit(_id)}>
+         Edit
+       </Button>
+       
        </div>
        {editProduct && (
           <EditProduct
@@ -52,7 +61,6 @@ const ProductList=(props)=> {
             toggle={toggle} /> 
     )}
 
-    
     </div>
     )
 }

@@ -37,7 +37,7 @@ export const startUserRegister=(formData, handleRedirect)=> {
 
 export const startLoginData=(loginData, handleRedirect)=> {
 
-    console.log('loginData', loginData)
+    // console.log('loginData', loginData)
 
     return (dispatch)=> {
         axios.post('/users/login', loginData)

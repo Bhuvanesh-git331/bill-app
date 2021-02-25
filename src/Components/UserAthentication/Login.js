@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
+import {Button} from '@material-ui/core'
 import swal from 'sweetalert'
 import validator from 'validator'
 import {startLoginData} from '../../Action/usersAction'
@@ -91,9 +92,9 @@ const Login=(props)=> {
             placeholder='Enter password'/> <br />
             {formErrors.password && <span style={{color:'red'}}>{formErrors.password}</span>} <br />
 
-            <input type='submit' value='Login'/> {' '}
+            <Button type='submit' variant='contained' color='primary'>Login</Button> {' '}
 
-            <input type='button' value='cancel' onClick={handleCancel}/>
+            <Button type='button' variant='contained' color='secondary' onClick={handleCancel}>Cancel</Button>
 
             </form>
 

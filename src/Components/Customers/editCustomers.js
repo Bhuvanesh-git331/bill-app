@@ -8,7 +8,7 @@ const EditCustomers=(props)=> {
 
     return (
         <div>
-           <Modal isOpen={open} onRequestClose={toggle} style={customStyles}>
+           <Modal isOpen={open} onRequestClose={toggle} style={customStyles} ariaHideApp={false}>
 
            <h1>Edit Customer</h1>
             <CustomersForm 

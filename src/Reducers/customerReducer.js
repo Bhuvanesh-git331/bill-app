@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const initialValue=[]
 const customerReducer=(state=initialValue, action)=> {

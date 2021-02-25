@@ -21,42 +21,37 @@ const ProductsContainer=(props)=> {
         
         <div className='product_container'>
         
-          <h2 style={{fontFamily:'cursive'}}>Input Product details</h2>
+         <div> <h2 style={{fontFamily:'cursive'}}>Input Product details</h2></div>
             
-        <br /> <br />
-
-        
-        <div class='alignleft'>
-          <img src='https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OMC/all-products-20170125054108782.gif' style={{width:'50%'}}/>
-        </div>
-       
-        
+     
+      <div className='header'>
+        <div className='form_container'>
         <ProductForm />
-      
-       <br /> 
+        </div>
+        
+        <div className='img'>
+          <img src='https://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/815/cached.offlinehbpl.hbpl.co.uk/news/OMC/all-products-20170125054108782.gif' className='product_img'/>
+        </div>
+        </div>
+    
+       {/* <br />  */}
       
       <div className="display_product_card">
         {products.length === 0 ? (
           <p className='product_header'>There is no existing product</p>
         ) : (
-            <div> 
-              <div className='product_header'>
-             <h2>Total Products - {products.length}</h2> 
-             </div>
-         {
+            
+            //   <div className='product_header'>
+            //  <h2>Total Products - {products.length}</h2> 
+            //  </div>
+          
            products.map((product) => (
             <ProductList {...product} key={product._id} />
           ))
-         }
-          
-          </div>
+         
         )}
-
         </div>
-
-        </div>
-
-        
+        </div>    
     )
 }
 

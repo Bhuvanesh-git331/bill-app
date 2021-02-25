@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {addLineItems} from '../../Action/billAction'
+import {Button} from '@material-ui/core'
 
 const ProductSelect=(props)=> {
     const products= useSelector((state)=> state.products)
@@ -62,11 +63,11 @@ const ProductSelect=(props)=> {
                 +
             </button> {' '}
 
-            <button className='butn' onClick={handleClick}>   
+            <Button variant='contained' color='primary' onClick={handleClick}>   
             
                 <b>Add</b>
 
-            </button>
+            </Button>
 
          </div>
         </div>

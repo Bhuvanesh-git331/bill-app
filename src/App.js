@@ -32,13 +32,13 @@ const App=(props)=> {
   }, [])
 
   return (
-    <div>
+    <div className='container'>
 
      <div className='home_header'>
       <h1 style={mystyle}>Bangalore Restaurant Supply Bill Application</h1>
       </div> 
 
-     <div>
+     <div >
       <NavBar userLoggedIn={userLoggedIn} handleAuth={handleAuth} handleMessage={handleMessage} message={message} />
       </div>
     </div>

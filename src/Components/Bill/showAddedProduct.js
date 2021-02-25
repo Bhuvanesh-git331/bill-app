@@ -1,6 +1,8 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
+import {Button} from '@material-ui/core'
 import {removeLineItems} from '../../Action/billAction'
+import '../../index.css'
 
 
 const ShowAddedProduct=(props)=> {
@@ -53,9 +55,9 @@ const ShowAddedProduct=(props)=> {
                              <td>{arr.price}</td>
                              <td>{arr.price*(ele.quantity)}</td>
                              <td>
-                                 <button onClick={()=> removeProduct(ele.product)}>
+                                 <Button variant='contained' color='secondary' onClick={()=> removeProduct(ele.product)}>
                                      Delete
-                                 </button>
+                                 </Button>
                              </td>
                             </tr>
                         )

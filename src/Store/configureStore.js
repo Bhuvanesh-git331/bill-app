@@ -4,9 +4,9 @@ import thunk from 'redux-thunk'
 import usersReducer from '../Reducers/usersReducer'
 import customerReducer from '../Reducers/customerReducer'
 import productsReducer from '../Reducers/productReducer'
-import {usresStatusReducer} from '../Reducers/usersStatusReducer'
 import {lineItems} from '../Reducers/lineItemsReducer'
 import {billReducer} from '../Reducers/billReducer'
+import {allBillReducer} from '../Reducers/allBillReducer'
 import adminReducer from '../Reducers/adminReducer'
 
 
@@ -17,9 +17,9 @@ const ConfigureStore=()=> {
          products:productsReducer,
          lineItem: lineItems,
          admin: adminReducer, 
+         allBill:allBillReducer,
          bill: billReducer,
-         status: usresStatusReducer
-    }), applyMiddleware(thunk)) 
+    }), applyMiddleware(thunk))  
 
     
     return store

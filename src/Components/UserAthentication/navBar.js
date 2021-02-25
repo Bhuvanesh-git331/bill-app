@@ -12,7 +12,7 @@ import ProductsContainer from '../Products/productContainer'
 import BillContainer from '../Bill/billContainer'
 import Admin from '../UserAthentication/Admin'
 import AllBill from '../Bill/allBill'
-import {usersStatus} from '../../Action/usersStatus'
+
 
 
 
@@ -39,7 +39,6 @@ const NavBar=(props)=> {
 
               <StyledLink to='/'onClick={()=> {
                   localStorage.removeItem('token')
-                  dispatch(usersStatus)
                   swal('Successfully loggedout')
                   handleAuth()
                   

@@ -2,6 +2,7 @@ import axios from '../Config/axios'
 import swal from 'sweetalert'
 
 const tokenValue=JSON.parse(localStorage.getItem('token'))
+console.log(tokenValue)
 
 export const addLineItems=(data)=> {
     console.log('billdata', data)
@@ -57,21 +58,55 @@ export const startCreateBill=(data, tokenValue)=> {
 
 const billList=(result)=> {
     return {
-        type: 'LIST_BILL',
+        type: 'GET_BILL',
         payload: result
     }
 }
 
-export const startGetBill=()=> {
+export const startGetAllBill=()=> {
+
     return (dispatch)=> {
         axios.get('/bills', {
             headers: {
-                Authorization: `Bearer ${tokenValue}`
+                Authorization : `Bearer ${tokenValue}` 
             }
         })
         .then(res=> {
             const result= res.data
+            console.log('result', result) 
             dispatch(billList(result))
+        })
+        .catch(err=> {
+            alert(err.message) 
+        })
+    }
+}
+
+
+
+const deleteBill=(result)=> {
+    return {
+        type: "DELETE_BILL",
+        payload: result
+    }
+}
+
+export const startDeleteBill=(id)=>{
+    console.log('id', id)
+    return (dispatch)=> {
+        axios.delete(`/bills/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${tokenValue}`
+            }
+        })
+        .then(res=> {
+            const result= res.data
+            console.log(result)
+            dispatch(deleteBill(result))
+            swal("hey", "you have removed this bill successfully", "success");
+        })
+        .catch(err=> {
+            alert(err.message)
         })
     }
 }

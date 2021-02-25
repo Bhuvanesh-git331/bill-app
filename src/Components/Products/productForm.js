@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import validator from "validator"
+import {  TextField, Button } from '@material-ui/core'
 import {startProductsData, startEditProduct} from '../../Action/productAction'
 import styled from 'styled-components'
 import '../../index.css'
@@ -59,41 +60,44 @@ const ProductForm=(props)=> {
     }
 
     return (
-        <div>
+        
           
        <div className='product_form'>
        
 
         <form onSubmit={handleSubmit}>
-            <label><b>Product Name</b></label><br />
+            <TextField
+            // variant='outlined'
+            label='Product name'
+            name='name'
+            value={productData.name}
+            onChange={handleChange}
+            style={{width:'90%'}} /> <br /> 
+            {formErrors.name && <span style={{color:'red'}}>{formErrors.name}</span> }  <br />  
 
-            <input 
-             type='text'
-             id='name'
-             name='name'
-             className="input"
-             value={productData.name}
-             onChange={handleChange}
-             style={{width:'60%'}} /> <br /> 
-              {formErrors.name && <span style={{color:'red'}}>{formErrors.name}</span> }  <br />  
-
-              <label><b>Product Price</b></label><br />
-             <input 
-             type='text'
-             id='price'
-             name='price'
-             className="input"
-             value={productData.price}
-             onChange={handleChange} 
-             style={{width:'60%'}}/> <br />
+            <TextField
+            // variant='outlined'
+            label='price in Rs.'
+            name='price'
+            value={productData.price}
+            onChange={handleChange}
+             style={{width:'90%'}}/>  <br />
               {formErrors.price && <span style={{color:'red'}}>{formErrors.price}</span> } <br />
 
-             <input type='submit'value='Add Item' style={{background:''}} />
+             <Button 
+            type="submit"
+            variant="contained"
+            // style={{marginLeft: '3px'}}
+            color="primary"
+                > {
+                  id ? 'Update Product' : 'Add Product'
+                } 
+             </Button>
 
         </form>
         </div>
           
-        </div>
+        
     )
 }
 

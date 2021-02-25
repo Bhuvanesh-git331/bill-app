@@ -16,7 +16,7 @@ export const startGetAccount=()=> {
 
         axios.get('/users/account', {
             headers : {
-                'Authorization' : `Bearer ${token}`
+                'Authorization': `Bearer ${token}`
             }
         })
         .then(res=>{

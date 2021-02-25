@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
+import {  TextField, Button } from '@material-ui/core'
 import validator from 'validator'
 import { startCustomersData,startEditCustomer} from '../../Action/customersAction'
 
@@ -71,45 +72,54 @@ const CustomersForm=(props)=> {
           <div >
 
           <form onSubmit={handleSubmit}>
-              <label><b>Name</b></label> <br />
-              <input 
-              type='text'
-              id='name'
+              
+              <TextField 
+              variant="outlined"
+              label='name'
               name='name'
-              className="input"
               value={customersData.name}
-              onChange={handleChange}/> <br /> <br />
+              onChange={handleChange}
+              style={{width:'90%'}}/> <br /> 
          {formErros.name && <span style={{color:'red'}}>{formErros.name}</span> }  <br />    
 
-           <label><b>Mobile</b></label>  <br />
-            <input 
-              type='text'
-              id='mobile'
+           
+            <TextField 
+              variant="outlined"
+              label='mobile'
               name='mobile'
-              className="input"
               value={customersData.mobile}
-              onChange={handleChange}/> <br /> <br />
+              onChange={handleChange}
+              style={{width:'90%'}}/> <br /> 
               {formErros.mobile && <span style={{color:'red'}}>{formErros.mobile}</span> }   <br />  
             
-            <label><b>Email</b></label>  <br /> 
-              <input 
-              type='text'
-              id='email'
+           
+              <TextField 
+              variant="outlined"
+              label='email'
               name='email'
-              className="input"
               value={customersData.email}
-              onChange={handleChange}/> <br /> <br />
+              onChange={handleChange}
+              style={{width:'90%'}}/> <br /> 
                  {formErros.email && <span style={{color:'red'}}>{formErros.email}</span> } <br /> 
 
-              <input 
-              type='submit' 
-              value='save'
-              /> {' '}
-
-              <input 
-              type='button'
-              value='cancel'
-              onClick={handleCancel}/>
+                 <Button 
+                type="submit"
+                variant="contained"
+                // style={{marginLeft: '3px'}}
+                        color="primary"
+                    > {
+                      id ? 'Update Customer' : 'Add Customer'
+                    }</Button>{' '}
+                    
+                          <Button
+                            type="button"
+                            variant="contained"
+                            // style={{marginLeft: '10px'}} 
+                            color="secondary"                             
+                            onClick={handleCancel}
+                        >
+                        Cancel
+                    </Button>
           </form>
 
           </div>
