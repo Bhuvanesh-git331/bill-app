@@ -54,3 +54,7 @@ $ npm install
 **Customers Component**
 
 ![image](https://user-images.githubusercontent.com/74610770/109151927-d061d300-7790-11eb-87a9-dcec69be34e9.png)
+
+**Billing Component**
+
+![image](https://user-images.githubusercontent.com/74610770/109152157-1e76d680-7791-11eb-83e8-4ab917a235fd.png)
