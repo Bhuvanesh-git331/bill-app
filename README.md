@@ -37,7 +37,7 @@ $ npm install
 
 **Registration Page**
 
-
+![image](https://user-images.githubusercontent.com/74610770/109133208-c59c4380-777a-11eb-943c-ff2600c9bf39.png)
 
 
 
