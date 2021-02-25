@@ -62,3 +62,7 @@ $ npm install
 **Total Bills Component**
 
 ![image](https://user-images.githubusercontent.com/74610770/109152322-5716b000-7791-11eb-881b-207ff25a4b2d.png)
+
+**Admin Page**
+
+![image](https://user-images.githubusercontent.com/74610770/109152527-a2c95980-7791-11eb-9384-c68b24d299eb.png)
