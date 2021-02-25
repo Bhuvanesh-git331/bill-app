@@ -43,6 +43,8 @@ $ npm install
 
 ![image](https://user-images.githubusercontent.com/74610770/109133522-19a72800-777b-11eb-80cb-e1fd7358e1dd.png)
 
+**Dashboard / Home page**
 
+![image](https://user-images.githubusercontent.com/74610770/109133832-67bc2b80-777b-11eb-8f79-227dcd74caeb.png)
 
 
